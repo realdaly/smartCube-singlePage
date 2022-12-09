@@ -1,0 +1,1 @@
+# smartCube-singlePage
