@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="SmartCube smart cube IT solutions programming designing helpdesk technical support networks web development hosting domains سمارت كيوب للحلول التقنية والبرمجة والشبكات والاستضافة">
-    <meta name="description" content=" IT-Solution Startup Company specialist in programming, web development, hosting, domains, designing, networks| سمارت كيوب للحلول التقنية والبرمجة والشبكات والاستضافة">
+    <meta name="description" content="IT-Solution Startup Company specialist in programming, web development, hosting, domains, designing, networks| سمارت كيوب للحلول التقنية والبرمجة والشبكات والاستضافة">
     <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
-    <script src="https://kit.fontawesome.com/b26d99a49b.js" crossorigin="anonymous"></script>
     <title>SmartCube for IT Solutions | سمارت كيوب</title>
     <style>
+        @font-face {
+            font-family: "somar";
+            src: url("./assets/fonts/Somar-Regular.otf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "somarBold";
+            src: url("./assets/fonts/Somar-Bold.otf") format("truetype");
+            font-weight: 800;
+            font-style: bold;
+            font-display: swap;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -51,12 +66,12 @@
         }
     
         .container .wrapper .hero .brief {
-            font-size: 20px;
+            font-size: 30px;
             margin-top: 1rem;
+            font-family: somar;
         }
     
         .container .wrapper .social {
-            font-family: sans-serif;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -77,6 +92,12 @@
             transition: all .2s;
             width: auto;
             height: 3rem;
+            font-family: somarBold !important;
+        }
+
+        .container .wrapper .social .socialItem img {
+            width: 1.5rem;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(237deg) brightness(107%) contrast(101%);
         }
     
         .container .wrapper .social .socialItem:hover {
@@ -124,14 +145,19 @@
     
         /* animation */
         .rotateCenter {
-            -webkit-animation: rotateCenter 0.6s ease-in-out both;
-                    animation: rotateCenter 0.6s ease-in-out both;
+            -webkit-animation: rotateCenter 0.6s ease-in-out both 1.5s;
+                    animation: rotateCenter 0.6s ease-in-out both 1.5s;
                     
         }
     
         .animateBg {
             -webkit-animation: animateBg 9s ease infinite;
             animation: animateBg 9s ease infinite;
+        }
+
+        .fadeIn {
+            -webkit-animation: fadeIn 0.6s ease-in-out both;
+                    animation: fadeIn 0.6s ease-in-out both;
         }
     
         @-webkit-keyframes rotateCenter {
@@ -169,41 +195,51 @@
             75% { background-position: 50% }
             100% { background-position: 0% }
         }
+
+        @-webkit-keyframes fadeIn {
+            0% {opacity: 0}
+            100% {opacity: 1}
+        }
+        @keyframes fadeIn {
+            0% {opacity: 0}
+            100% {opacity: 1}
+        }
     </style>
 </head>
 <body>
     <div class="container animateBg">
-        <main class="wrapper">
+        <main class="wrapper fadeIn">
             <section class="hero">
                 <img class="logo rotateCenter" src="./assets/logo.svg" alt="SmartCube Logo">
                 <img class="textLogo" src="./assets/textLogo.svg" alt="SmartCube Text">
-                <p class="brief">Smart Cube aims to be an integrated service provider that provides all customers' needs in terms of technology solutions.
-                Custom IT services and solutions built specifically for your business</p>
+                <p class="brief">
+                    فريق مطورين شباب موهوبين وشغوفين بتكنولوجيا المعلومات وحل مشكلاتها. جمعنا بسمارت كيوب خبرة سنين حتى نقدم أفضل الحلول البرمجية والتقنية لعملائنا وبأحدث التقنيات. فريقنا يوفر لكم مجموعة كبيرة من الخدمات التقنية: من حلول برمجية، وحلول أمنية، وبناء وتصميم الشبكات الداخلية وغيرها.
+                </p>
             </section>
             <section class="social">
                 <a target="_blank" href="https://smcube.dev/" class="socialItem website">
-                    <i class="fa-solid fa-globe"></i>
-                    <p>Website</p> 
+                    <img src="./assets/icons/globe-solid.svg">
+                    <p>الموقع الالكتروني</p> 
                 </a>
                 <a target="_blank" href="https://www.facebook.com/smcube.dev/" class="socialItem facebook">
-                    <i class=" fa-lg fa-brands fa-square-facebook"></i>
-                    <p>Facebook</p> 
+                    <img src="./assets/icons/square-facebook.svg">
+                    <p>فيسبوك</p> 
                 </a>
                 <a target="_blank" href="https://www.instagram.com/smcube.dev/" class="socialItem instagram">
-                    <i class=" fa-lg fa-brands fa-square-instagram"></i>
-                    <p>Instagram</p> 
+                    <img src="./assets/icons/square-instagram.svg">
+                    <p>إنستغرام</p> 
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/company/smcube" class="socialItem linkedIn">
-                    <i class=" fa-lg fa-brands fa-linkedin"></i>
-                    <p>LinkedIn</p> 
+                    <img src="./assets/icons/linkedin.svg">
+                    <p>لنكد إن</p> 
                 </a>
                 <a target="_blank" href="tel:+9647816118551" class="socialItem phone">
-                    <i class="fa-lg fa-solid fa-square-phone"></i>
-                    <p>+964 781 611 8551</p> 
+                    <img src="./assets/icons/square-phone-solid.svg">
+                    <p dir="ltr">+964 781 611 8551</p> 
                 </a>
                 <a target="_blank" href="tel:+9647723823326" class="socialItem phone">
-                    <i class="fa-lg fa-solid fa-square-phone"></i>
-                    <p>+964 772 382 3326</p> 
+                    <img src="./assets/icons/square-phone-solid.svg">
+                    <p dir="ltr">+964 772 382 3326</p> 
                 </a>
             </section>
         </main>
